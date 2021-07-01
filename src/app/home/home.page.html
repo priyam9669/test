@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="bg">
+    <div class="logo">
+      <img src="https://cdn.logo.com/hotlink-ok/logo-social.png">
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="box">
+      <h2>Register</h2>
+      <p>Enter your detail to regiter your account</p>
+    
+  
+    <form (ngSubmit)="submit_function()" [formGroup]='my_form'>
+      <ion-item ><ion-input formControlName="first_name" placeholder="First name"></ion-input></ion-item>
+      <ion-item ><ion-input formControlName="last_name" placeholder="Last name"></ion-input></ion-item>
+      <ion-item ><ion-input formControlName="password" type="pasword" placeholder="Password" (ionChange)="check_password()"></ion-input>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </ion-item>
+      <small *ngIf="!password_not_valid" id="emailHelp2" class="form-text text-muted small_text" ><span color="danger">Password must have min 8 character.1 UpperCase, 1lower case and 1 number.</span> </small> 
+      <ion-item ><ion-input formControlName="user_name" (ionChange)="check_userName()" placeholder="User name"></ion-input></ion-item>
+      <ion-button type='submit' [disabled]="!my_form_valid">Submit</ion-button>
+      
+    </form>
+   
   </div>
+
+</div>
 </ion-content>
