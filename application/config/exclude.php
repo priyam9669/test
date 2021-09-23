@@ -1,0 +1,28 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+$config['directories'] = array(
+                    'BACKUPS',
+                    'FILE_SHARE',
+                    'SCRIPTS',
+                    //'atriumu',
+                    'global',
+                    'testu',
+                    'lost+found',
+	'service',
+                    'alpha',
+                    'alpha7',
+                    'cgi-bin',
+                    'beta',
+                    'default',
+                    'demou',
+                    'error',
+                    'gamma',
+                    'html',
+                    'icons',
+                    'kappa',
+                    'noindex',
+                    'osu',
+                    'partners',
+                    'sis',
+                    'admin',
+                    );

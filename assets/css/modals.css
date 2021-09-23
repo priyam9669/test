@@ -1,0 +1,672 @@
+/*=============================
+	Modal Overlays
+==============================*/
+
+/* #profile_modal {display:none;} */
+
+.row:after { content: ""; clear: both; }
+.style_select {
+   /*
+   border: 1px solid #B6B6B3;
+   background: url(/assets/images/reports.png) no-repeat scroll right -261px transparent;
+   padding: 5px 10px;
+   width: 177px;
+   float: left;
+   clear: both;
+   */
+}
+
+.select-replace-cover { margin: 0 }
+.dropdown {
+   float: left;
+   clear: both;
+   margin: 10px 0;
+   display: inline;
+   width: 260px
+}
+
+
+#confirm_person_remove,
+#restore,
+#confirm_msg,
+#manage_person_id,
+#confirm_id_status_change,
+#confirm_id_msg,
+#confirm_person_msg,
+#remove_people_accounts_with_balance,
+#remove_account_modal,
+#refund_confirm,
+#charge_confirm,
+#deposit_confirm,
+#reset_confirm,
+#withdrawal_confirm
+#refund_complete,
+#charge_complete,
+#deposit_complete,
+#reset_complete,
+#withdrawal_complete,
+#transfer_complete,
+#refund_modal,
+#charge_modal,
+#deposit_modal,
+#reset_modal,
+#withdrawal_modal,
+#sharing_modal,
+#transfer_modal { display: none; }
+
+#deposit_confirm.ui-dialog-content.ui-widget-content {padding: 0 25px}
+
+.ui-dialog-content p, 
+#remove_people_accounts_with_balance .header,
+#remove_account_modal .header,
+#confirm_id_msg ul, 
+#confirm_id_msg .header,
+#withdrawal_modal .header,
+#reset_account_modal .header,
+#deposit_modal .header,
+#charge_modal .header,
+#settings_modal .header,
+#sharing_modal .header, 
+#refund_modal .header,
+#acct_transfer_modal .header {border-bottom: 1px solid #ccc;padding:0 0 16px 0; margin-bottom:16px;font-style:normal; margin-top: 2px; width: 100%}
+
+#settings_modal h1 {
+   color: #999;
+   clear: both;
+   border: none;
+   font-style: normal;
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+
+.ui-widget-content legend, .ui-widget-content label, .ui-widget-content .label {
+   font-family: "MyriadProSemiBold","Helvetica","Arial";
+   font-size: 14px;
+   line-height:15px;
+   margin: 5px 0 0;
+   padding:0;
+   float:left;
+   font-style:normal;
+   color: #464646;
+   cursor: pointer;
+   display: inline-block;
+}
+
+.ui-widget-content .row {padding-top:11px;}
+.ui-widget-content .row > .row, .ui-widget-content .header + .row {padding-top:0px;}
+
+
+.ui-widget-content label.block {display: block;clear:both;float:none;}
+
+.ui-widget-content .form_des {
+	color:#a7a9ac;
+	font-family:"MyriadProRegular", "Helvetica", "Arial";
+	font-style: italic;
+	padding:5px 0 12px;
+}
+
+.ui-widget-content input[type="radio"], .ui-widget-content input[type="checkbox"] {
+   opacity: 0; /* Chrome 4+, FF2+, Saf3.1+, Opera 9+, IE9, iOS 3.2+, Android 2.1+ */
+   filter: alpha(opacity=0); /* IE6-IE8 */
+   position: absolute;
+}
+
+.ui-widget-content .radio {
+      cursor: pointer;
+      background: url(/assets/images/system.png) no-repeat scroll 1px -1983px transparent;
+      display: inline-block;
+      width: 20px;
+      height: 25px;
+}
+
+.active .radio { background-position: -25px -1983px; }
+
+.ui-widget-content .checkbox {
+   cursor: pointer;
+   background: url(/assets/images/checkboxes.png) no-repeat scroll 15px 11px transparent;
+   display: block;
+   float: left;
+   width: 45px;
+   height: 35px;
+}
+.ui-widget-content li.active_wrap .checkbox { background-position: 15px -37px; }
+
+input.search {
+	background: url("/assets/images/system.png") no-repeat scroll 167px -1373px transparent;
+	width: 175px;
+}
+input.filter {
+	background-position: 145px -1373px;
+	float:right;
+	position: absolute;
+	right:0; top:0;
+	color:#959595;
+	font-size:12px;
+	padding:6px 10px 3px;
+	width: 150px;
+}
+input.filter:focus {color:#464646}
+
+input[type="text"].filter {margin: 15px 0 0}
+
+.ui-dialog {padding: 10px 1px 10px 0;}
+
+.ui-widget select {
+   /*
+   margin-left: -10px;
+   width:180px;
+   */
+}
+
+.ui-widget textarea {margin-top: 7px; margin-bottom: 10px; padding: 9px 12px; width: 515px !important;resize:none; font-size: 12px;}
+
+.ui-dialog .ui-dialog-buttonpane {margin: 13px 0 0 10px; padding: 0.3em 0 0.5em 1.6em;}
+.ui-dialog .ui-dialog-buttonpane button {margin: 0 20px 0.5em 11px;}
+.ui-dialog .ui-dialog-titlebar-close {margin: -20px 6px 0 0;}
+.ui-dialog .ui-dialog-buttonpane {padding: 0.3em 0 0.5em 1.1em;}
+
+input[type="text"], input[type="number"] {margin: 10px 0;}
+
+.ui-dialog .ui-dialog-title {
+   color: #095890;
+   padding-bottom: 10px;
+   font-size: 20px;
+}
+
+.current_balance {font-size: 14px;}
+
+
+/*=============================
+	    Date/Time
+=============================*/
+label[for='date'] {clear:both;}
+.ui-widget .date_time {
+	float: left;
+	width: 130px;
+	margin-right: 15px;
+	display: inline;
+	clear: none;
+	margin-top: 2px;
+}
+.ui-widget .date_time input[type="text"] {width: 80px;}
+.ui-widget .date_time.hours { width: 181px }
+.ui-widget .hour_wrap,
+.ui-widget .min_wrap,
+.ui-widget .am_pm_wrap {
+	margin-right: 12px;
+	overflow: hidden;
+	background: url(/assets/images/reports.png) no-repeat scroll 26px -198px transparent;
+	width: 35px;
+	height: 27px;
+	float: left;
+	border: 1px solid #D5D5D7;
+	display: inline
+}
+.ui-widget .hour_wrap .select-replace-cover,
+.ui-widget .min_wrap .select-replace-cover,
+.ui-widget .am_pm_wrap .select-replace-cover { padding: 5px }
+
+.ui-widget .hour_min {
+	padding-top: 6px;
+	background: url(/assets/images/reports.png) no-repeat scroll 42px -311px transparent;
+	width: 190px;
+	float: left
+}
+.ui-widget .hour_min select { width: 50px; }
+.ui-widget .date_time.day { background-position: 105px 6px;}
+
+.ui-widget .min_wrap {margin-right: 5px}
+.ui-widget .am_pm_wrap {background-position: 29px -198px; width: 39px}
+
+/***************************
+	Readers/select list block
+***************************/
+.select_list {margin:2px 0 12px;}
+
+.select_list {position: relative;}
+.select_list ul {
+	height:223px;
+	border: 1px solid #6d6e71;
+	clear:both;
+	overflow-x:hidden;
+	overflow-y: scroll;
+	padding:0;
+}
+.select_list ul li{
+    border-bottom: 1px solid #e7e7e8;
+    padding: 10px 0 7px 31px;
+    cursor: pointer;
+    background-image: url(/assets/images/checkboxes.png);
+    background-position: 17px 11px;
+    background-repeat: no-repeat;
+}
+li.apply-discount {
+    padding: 10px 0px 7px 0px;
+    cursor: pointer;
+    background: url(/assets/images/checkboxes.png) no-repeat 0px 11px;
+    height: 16px;
+}
+
+li.apply-discount.checked {
+    background-position: 0px -38px;
+}
+
+li.apply-discount label{
+   padding-left: 30px;
+    margin-top: 0px;
+}
+
+.select_list ul label {
+	float:none;
+	margin:0 0 0 15px;
+	font-family:"MyriadProRegular", "Helvetica", "Arial";
+	color:#6d6e71;
+}
+.select_list ul li.active_wrap { background-position: 17px -38px; }
+
+
+
+/***************************
+		 Manage IDs 
+***************************/
+#manage_person_id {padding-bottom:25px;border:0;overflow: visible;}
+
+div[aria-labelledby="ui-dialog-title-manage_person_id"] .ui-dialog-buttonpane .ui-dialog-buttonset {margin-top:2.5em;}
+/*#manage_person_id ul li label { color: #6d6e71 }*/
+
+#manage_person_id ul {
+	margin-bottom: 20px;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#manage_person_id li { 
+	cursor: pointer; 
+   	border-bottom: 1px solid #e7e7e8;
+   	padding-top: 1px;
+   	width: 100%;
+   	display: inline-block;
+   	float: left;
+}
+#manage_person_id li:first-child { border-top: 1px solid #e7e7e8; }
+#manage_person_id li .status {
+	float:right;
+	padding-top:6px;
+	padding-right:20px;
+}
+
+#manage_person_id button {
+	background-color: #f4f4f3;
+	padding: 6px 10px 5px 30px;
+	display: block;
+	text-decoration: none;
+	color: #464646;
+	width: auto;
+	position: relative;
+	float: none;
+	margin:5px 0 19px;
+	border: 0;
+	font-family: "MyriadProSemiBold", "Helvetica", "Arial";
+	text-transform: uppercase;
+	clear:both;
+	font-size:12px;
+}
+
+#manage_person_id button:hover { 
+	background-color: #eee; 
+	color: #095890;
+}
+
+#manage_person_id button span {
+   background: url(/assets/images/system.png) no-repeat scroll 0 0 transparent;
+   width: 15px;
+   height: 15px;
+   display: block;
+   position: absolute;
+   left: 10px; top: 4px;
+}
+
+#manage_person_id button[name="all"] span { background-position: 0 -1782px; }
+#manage_person_id button[name="all"].select_all span { background-position: -34px -1782px; }
+ 
+#confirm_person_remove p {margin:0;}
+#confirm_person_msg p {margin-top: 2px}
+
+.ui-dialog-content p, 
+#remove_people_accounts_with_balance .header,
+#remove_account_modal .header,
+#confirm_id_msg ul, 
+#confirm_id_msg .header {
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 12px 0; 
+  margin-bottom: 12px;
+  font-style: normal;
+  font-size: 14px;
+}
+
+#confirm_id_msg li {
+	padding: 5px 0 10px 0px;
+	font-family: "MyriadProSemiBold", "Helvetica", "Arial";
+}
+#remove_people_accounts_with_balance p,
+#remove_account_modal p,
+#manage_person_id p { padding-left: 0; }
+
+/*input[type="checkbox"] {
+   opacity: 0;  Chrome 4+, FF2+, Saf3.1+, Opera 9+, IE9, iOS 3.2+, Android 2.1+ 
+   filter: alpha(opacity=0);  IE6-IE8 
+   position: absolute;
+}*/
+#manage_person_id {
+  padding-bottom: 25px;
+  border: 0;
+  overflow: visible;
+}
+#manage_person_id + .ui-dialog-buttonpane .ui-dialog-buttonset { margin-top: 2.5em; }
+/*#manage_person_id ul li label { color: #6d6e71; }*/
+/*#manage_person_id ul { margin-bottom: 20px; }*/
+/*#manage_person_id li {
+   border-bottom: 1px solid #e7e7e8;
+   padding-top: 1px;
+   width: 100%;
+   display: inline-block;
+}*/
+#manage_person_id li:first-child { border-top: 1px solid #e7e7e8; }
+/*#manage_person_id .checkbox {
+   cursor: pointer;
+   background: url(/assets/images/checkboxes.png) no-repeat scroll 15px 11px transparent;
+   display: block;
+   float: left;
+   width: 45px;
+   height: 35px;
+}*/
+/*#manage_person_id li.active_wrap .checkbox { background-position: 15px -43px; }*/
+#manage_person_id label, #manage_person_id .label {
+   font-size: 14px;
+   cursor: pointer;
+   color: #6d6e71;
+   margin-top: 11px;
+   display: inline-block;
+   font-family: "MyriadProSemiBold", "Helvetica", "Arial";
+}
+#manage_person_id label.block { display: block; clear: both; }
+#confirm_person_remove p,
+#confirm_account_remove p { margin: 0; }
+#confirm_id_msg li {
+	padding: 5px 0 10px 0px;
+	font-family: "MyriadProSemiBold", "Helvetica", "Arial";
+}
+
+div[aria-labelledby="ui-dialog-title-confirm_person_remove"] .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix,
+div[aria-labelledby="ui-dialog-title-restore"] .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix,
+div[aria-labelledby="ui-dialog-title-confirm_account_remove"] .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix { padding: 0.3em 0 0.5em 0.4em !important; }
+div[aria-labelledby="ui-dialog-title-confirm_person_msg"] .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix {margin: 0}
+
+/***************************
+	Account/Person Destroy
+***************************/
+
+#remove_people_accounts_with_balance,
+#remove_account_modal {height:auto;}
+#remove_people_accounts_with_balance .row,
+#remove_account_modal .row {height:auto;border-bottom:0;}
+
+#remove_people_accounts_with_balance .account,
+#remove_account_modal .account {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom:24px;
+  margin-top:21px;
+}
+#remove_people_accounts_with_balance .account:last-child {margin-bottom:0;}
+
+#remove_people_accounts_with_balance .account label,
+#remove_account_modal .account label {
+   font-family: "MyriadProSemiBold","Helvetica","Arial";
+   font-size: 14px;
+   margin: 0;
+   padding: 0;
+   float: none;
+   font-style: normal;
+}
+
+#remove_people_accounts_with_balance .row.balance, 
+#remove_people_accounts_with_balance .row.offset, 
+#remove_people_accounts_with_balance .row.closing_bal,
+#remove_account_modal .row.balance, 
+#remove_account_modal .row.offset, 
+#remove_account_modal .row.closing_bal {
+	position: relative;
+	height:20px;
+	padding:0;
+	margin-top:5px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   		box-sizing: border-box;
+}
+
+#remove_people_accounts_with_balance .row .left, 
+#remove_people_accounts_with_balance .row .middle, 
+#remove_people_accounts_with_balance .row .right,
+#remove_account_modal .row .left, 
+#remove_account_modal .row .middle, 
+#remove_account_modal .row .right {
+	display:inline-block;
+	position:absolute;
+	top:0;
+}
+
+#remove_people_accounts_with_balance .row .left,
+#remove_account_modal .row .left {left:0;background:#fff;z-index:1;padding-right:10px;}
+#remove_people_accounts_with_balance .row .right,
+#remove_account_modal .row .right {right:0;background:#fff;z-index:1;padding-left:5px;}
+
+#remove_account_modal .row .middle {width:100%;border-bottom: 1px dotted #ccc;height:15px;} 
+#remove_people_accounts_with_balance .row.offset .left,
+#remove_account_modal .row.offset .left {font-style:italic;}
+
+#remove_people_accounts_with_balance .account label[for="account_disposition[]"],
+#remove_account_modal .account label[for="account_disposition"] {float:left;}
+#remove_people_accounts_with_balance .row.reason,
+#remove_account_modal .row.reason {margin-top:15px;height:50px;}
+#remove_people_accounts_with_balance .row.reason .style_select,
+#remove_account_modal .row.reason .style_select {width:238px;}
+#remove_people_accounts_with_balance .row.reason select,
+#remove_account_modal .row.reason select {width:258px;}
+
+#remove_people_accounts_with_balance .row.reason, 
+#remove_people_accounts_with_balance .row.other_reason,
+#remove_account_modal .row.reason, 
+#remove_account_modal .row.other_reason {width:100%;}
+
+#remove_people_accounts_with_balance .row.other_reason,
+#remove_account_modal .row.other_reason {display:none;}
+#remove_people_accounts_with_balance input[type="submit"],
+#remove_account_modal input[type="submit"] {
+	margin-top: 24px;
+	float: right;
+	background: #464646;
+	color: #fff;
+	font-family: "MyriadProSemiBold","Helvetica","Arial";
+	text-transform: uppercase;
+}
+
+#confirm_person_remove .form_actions,
+#confirm_account_remove .form_actions {
+	float: right;
+	margin-top: 24px;
+}
+.form_actions input[type="submit"] {
+	margin: 0 0 0.5em 11px;
+	text-transform: uppercase;
+	padding: 7px 1em 4px 1em;
+	background: #464646;
+	font-size: 14px;
+	font-family: "MyriadProSemiBold", "Helvetica", "Arial";
+}
+
+.form_actions input[type="submit"]:hover { 
+	background: #095890; 
+}
+/***************************
+	Account Transfers
+***************************/
+
+
+.ui-widget strong, .header strong {font-weight:normal;font-family: "MyriadProSemiBold", "Helvetica", "Arial"; font-size: 14px;}
+
+label[for="multi_person"] {margin-bottom:5px;}
+.multi_person_wrap label {margin:17px 5px 1px 0;}
+
+.people_filter {position: relative;}
+
+ul#recip_filter {
+	display:none;
+	position: absolute;
+	top:69px;
+	left:0;
+	z-index:1000;
+	width:197px;
+	height: 180px;
+	border:1px solid #ccc;
+	border-top:0;
+	background:#fff;
+	overflow: scroll;
+	overflow-x: hidden;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   		box-sizing: border-box;
+}
+
+ul#recip_filter li {
+	cursor: pointer;
+	border-bottom: 1px solid #ccc;
+	padding: 3px 10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   		box-sizing: border-box;
+}
+ul#recip_filter li:last-child { border-bottom: none; }
+ul#recip_filter li:hover { background: #0B66A8; }
+ul#recip_filter li:hover span { color: #fff; }
+
+.reader_deposit, .in_out, .multi_yes, .multi_no, .refund_source, .hard_delete, .hard_restore {float:left;padding-top:5px;}
+.reader_deposit, .in_out, .refund_source, .hard_delete, .hard_restore   {width:70px;}
+.multi_yes, .multi_no, {width:63px;}
+.in_out label, .multi_yes label, .multi_no label, .refund_source label {float:none;position: relative;top:-7px; font-family:"MyriadProRegular", "Helvetica", "Arial";}
+
+	.currency_input {
+	position: relative;
+	width: 205px;
+	float: left;
+	clear: both;
+    }
+    .currency_input input[type="text"] {width:175px; font-size: 12px;}
+    .swipes span,
+    .currency_input span {
+	position: absolute;
+	top: 35px;
+	right: 20px;
+	display: block;
+	color: #acacac;
+    }
+    .currency_input span { top: 16px; }
+    
+/***************************
+	Deposits
+***************************/
+
+.reader_deposit label, .hard_delete label, .hard_restore label{ float:none;margin-top:0; position:relative; top:-7px;}
+
+div[id$="_confirm"] span { text-transform: capitalize; font-size: 14px; color: #464646; }
+
+div[id$="_confirm"] li { text-transform: capitalize; font-size: 14px; color: #095890; padding-bottom: 5px;}
+
+/***************************
+	Refunds
+***************************/
+
+
+/***************************
+	JS Behavios
+***************************/
+
+.conditional { display: none; }
+
+
+/*=============================
+      Start End Date
+=============================*/
+    
+#settings_modal .start_end {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+#settings_modal .start_end .spacer {
+  background: url(/assets/images/reports.png) no-repeat scroll 0 -326px transparent;
+  width: 10px;
+  height: 15px;
+  float: left;
+  margin-top: 20px;
+  display: inline;
+}
+#settings_modal .start_block {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  height: 80px;
+}
+
+#settings_modal .end_block {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  clear: both;
+  height: 90px;
+}
+
+#settings_modal .start_date, 
+#settings_modal .start_time,
+#settings_modal .end_date,
+#settings_modal .end_time { float: left; }
+#settings_modal .start_time .hour,
+#settings_modal .end_time .hour {
+  float: left;
+  clear: both;
+  padding-top: 2px;
+}
+#settings_modal .start_time .minute,
+#settings_modal .start_time .period,
+#settings_modal .end_time .minute,
+#settings_modal .end_time .period {
+  float: left;
+  padding-top: 2px;
+}
+#settings_modal .start_date input[type="text"], 
+#settings_modal .end_date input[type="text"] { width: 80px; height: 15px;}
+#settings_modal .start_date_bg,
+#settings_modal .end_date_bg {
+  background: url(/assets/images/reports.png) no-repeat scroll 108px 11px transparent;
+  width: 135px;
+  height: 40px;
+  padding-top: 2px;
+  float: left;
+  clear: both;
+  cursor: pointer;
+}
+#settings_modal .hour .style_select, 
+#settings_modal .minute .style_select, 
+#settings_modal .period .style_select {
+  width: 21px;
+  background-position: 32px -201px;
+}
+#settings_modal .hour .dropdown, 
+#settings_modal .minute .dropdown, 
+#settings_modal .period .dropdown {
+  width: 50px;
+  clear: none;
+}
+#settings_modal form fieldset .hour select, 
+#settings_modal form fieldset .minute select, 
+#settings_modal form fieldset .period select { width: 30px; }

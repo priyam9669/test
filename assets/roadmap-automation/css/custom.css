@@ -1,0 +1,117 @@
+.login-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.user-name {
+    margin-top: 8px;
+}
+
+.dev-name-upper-margin {
+    margin-top: 4px;
+}
+
+.efficiency-upper-margin {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.bottom-border {
+    border-bottom-color: #aaa;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.internal-rank-upper-margin,
+.strategic-upper-margin,
+.tactical-upper-margin {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.dev-amt-upper-margin,
+.dev-amt-val-upper-margin {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.date-upper-margin,
+.date-picker-upper-margin {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.date-top-margin {
+    margin-top: 30px;
+}
+
+/* .date-time-picker-input {
+    pointer-events: none;
+} */
+
+
+.lds-ellipsis.visible {
+    display: inline-block;
+}
+.lds-ellipsis {
+    display: none;
+    position: relative;
+    width: 80px;
+    height: 32px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 12px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #007bff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  

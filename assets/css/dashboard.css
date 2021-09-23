@@ -1,0 +1,40 @@
+.logout{
+    display: inline-block;
+    float: right;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-size: 12px;
+    padding: 5px; 
+}
+th{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.school{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: #777777;
+    color: white;
+}
+#select_school, #select_connection{
+    width: 120px;
+    margin: 00px 0px 20px 20px;
+    float:right;
+}
+.show-readers{
+    cursor: pointer;
+}
+.filter.drop-down{
+    margin-left: 20px; 
+}
